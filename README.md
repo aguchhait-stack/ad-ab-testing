@@ -1,12 +1,27 @@
 # Ad Campaign A/B Test
 
-An advertising agency works with a brand called SmartAD to develop interactive ads. This new advertisement is expected to attract a large number of users to fill out their questionnaires. To determine whether the interactive ad generated more responses to the questionnaire, they conducted an A/B test. This project analyzes the results to determine whether the new ad design affects user behavior in responding to the BIO questionnaire.
+## 📌 Background
+An advertising agency partnered with SmartAD to test whether an interactive ad format generates more questionnaire responses than the standard format. A controlled A/B experiment was conducted to measure the impact.
 
-## Key Finding
+## 🧪 Experiment Design
+- **Control**: Standard ad
+- **Treatment**: Interactive ad
+- **Metric**: Click-through rate (CTR) on the questionnaire
+- **Sample**: Randomly assigned users
 
-- SRM check: groups were not balanced as expected (p < 0.05) — flagged as a data quality concern
-- Main test: no statistically significant difference in conversion rate between groups (p = 0.556)
-- Given the SRM result, this finding is treated as provisional rather than conclusive — in a production setting, the imbalance would need investigating before trusting the result
+## 🔍 Key Findings
+| Check | Result | Interpretation |
+|-------|--------|----------------|
+| **SRM Check** | p < 0.05 | ⚠️ Groups were not balanced — data quality concern |
+| **A/B Test** | p = 0.556 | ❌ No statistically significant difference in CTR |
+
+## 💡 Recommendation
+The interactive ad did not show a significant lift in conversion. **However**, due to the detected SRM, this result is **provisional**. In a production environment, I would investigate the source of the imbalance before making any business decision.
+
+## 🛠️ Technologies Used
+- Python (Pandas, Matplotlib)
+- Jupyter Notebook
+- GitHub
 
 ![A/B test results](outputs/ab_test_results.png)
 
